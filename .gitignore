@@ -36,3 +36,6 @@ target/
 
 # Claude Code
 .claude/
+
+# Environment secrets
+.env

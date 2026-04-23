@@ -1,5 +1,6 @@
 package org.bodzan;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,7 +40,7 @@ import java.util.logging.Logger;
 
 public class Main {
 
-    private static SongLinkWithEmbed searchForVideoOrGetLink(String keyword)  {
+    private static SongLinkWithEmbed searchForVideoOrGetLink(String keyword, String ytApiKey)  {
         SongLinkWithEmbed songLinkWithEmbed = new SongLinkWithEmbed();
         String ytLink = "https://www.youtube.com/watch?v=";
 //        StringBuilder keyword = new StringBuilder();
@@ -59,7 +60,7 @@ public class Main {
                 return songLinkWithEmbed;
             }
             try {
-                URL url = new URL(String.format("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=%s&key=AIzaSyCZOLCT1fEJkaVoPe__zDgHR5Ipa5p18J0", videoId));
+                URL url = new URL(String.format("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=%s&key=%s", videoId, ytApiKey));
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 con.setRequestMethod("GET");
 
@@ -86,7 +87,7 @@ public class Main {
         }
         keyword = keyword.replaceAll(" ", "+");
 
-        String queryFormatted = String.format("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=%s&type=video&key=AIzaSyCZOLCT1fEJkaVoPe__zDgHR5Ipa5p18J0", keyword);
+        String queryFormatted = String.format("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=%s&type=video&key=%s", keyword, ytApiKey);
         try {
             URL url = new URL(queryFormatted);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -198,7 +199,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        String token = "OTk3OTg2ODgxNTYyMjMwODk0.GVN8de.XprzTy8ofFo0NrgC-KVRs6tNhUWHZyJdrK1B3Y";
+        Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
+        String token = dotenv.get("DISCORD_TOKEN");
+        String ytApiKey = dotenv.get("YOUTUBE_API_KEY");
         Long testguildId = 997989667045658735L;
         long nasGuildId = 997894824004956320L;
         long domServerGuildId = 705920358552829952L;
@@ -269,7 +272,7 @@ public class Main {
                 SongLinkWithEmbed linkWithEmbed = event.getInteraction().getCommandInteraction()
                         .flatMap(commandInteraction -> commandInteraction.getOption("keyword"))
                         .flatMap(ApplicationCommandInteractionOption::getValue)
-                        .map(applicationCommandInteractionOptionValue -> searchForVideoOrGetLink(applicationCommandInteractionOptionValue.asString()))
+                        .map(applicationCommandInteractionOptionValue -> searchForVideoOrGetLink(applicationCommandInteractionOptionValue.asString(), ytApiKey))
                         .orElseThrow();
                 Snowflake currentGID = event.getInteraction().getGuildId().orElseThrow();
                 GuildAudioManager.of(currentGID).PLAYER_MANAGER.loadItem(linkWithEmbed.getSongLink(), GuildAudioManager.of(currentGID).getScheduler());
