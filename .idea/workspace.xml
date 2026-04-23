@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="98726390-f8c7-464c-a188-36da4c256126" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/IdJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/IdJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ItemJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ItemJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ItemJsonPlainId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ItemJsonPlainId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/PageInfoJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/PageInfoJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SearchJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SearchJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SearchJsonPlainId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SearchJsonPlainId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SnippetJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SnippetJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ThumbnailJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ThumbnailJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ThumbnailWrapJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ThumbnailWrapJson.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +145,7 @@
       <workItem from="1776946636159" duration="1105000" />
       <workItem from="1776948056776" duration="440000" />
       <workItem from="1776948510740" duration="56000" />
-      <workItem from="1776948571896" duration="6203000" />
+      <workItem from="1776948571896" duration="7935000" />
     </task>
     <servers />
   </component>

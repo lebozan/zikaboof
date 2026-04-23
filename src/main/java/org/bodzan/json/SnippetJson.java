@@ -1,7 +1,9 @@
 package org.bodzan.json;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SnippetJson {
     public String publishedAt;
     public String channelId;

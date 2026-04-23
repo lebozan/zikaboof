@@ -1,9 +1,10 @@
 package org.bodzan.json;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ThumbnailWrapJson {
 
     public ThumbnailJson difolt;

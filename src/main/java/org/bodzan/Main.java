@@ -204,8 +204,8 @@ public class Main {
         String ytApiKey = dotenv.get("YOUTUBE_API_KEY");
         Long testguildId = 997989667045658735L;
         long nasGuildId = 997894824004956320L;
-        long domServerGuildId = 705920358552829952L;
-        List<Long> guildIds = List.of(nasGuildId, domServerGuildId);
+//        long domServerGuildId = 705920358552829952L;
+        List<Long> guildIds = List.of(testguildId);
 
         Logger log = Logger.getLogger(Main.class.getName());
 
