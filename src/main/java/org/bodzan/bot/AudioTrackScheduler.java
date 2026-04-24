@@ -11,8 +11,10 @@ import com.sedmelluq.discord.lavaplayer.track.AudioTrackEndReason;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class AudioTrackScheduler extends AudioEventAdapter implements AudioLoadResultHandler {
+    private static final Logger log = Logger.getLogger(AudioTrackScheduler.class.getName());
     private final List<AudioTrack> queue;
     private final AudioPlayer player;
 
@@ -65,11 +67,11 @@ public class AudioTrackScheduler extends AudioEventAdapter implements AudioLoadR
 
     @Override
     public void noMatches() {
-
+        log.warning("LavaPlayer: no matches found for the provided identifier");
     }
 
     @Override
     public void loadFailed(FriendlyException exception) {
-
+        log.severe("LavaPlayer: load failed — " + exception.getMessage());
     }
 }

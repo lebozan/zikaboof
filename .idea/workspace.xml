@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98726390-f8c7-464c-a188-36da4c256126" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.claude/settings.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/.claude/settings.local.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/IdJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/IdJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ItemJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ItemJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ItemJsonPlainId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ItemJsonPlainId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/PageInfoJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/PageInfoJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SearchJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SearchJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SearchJsonPlainId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SearchJsonPlainId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SnippetJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/SnippetJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ThumbnailJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ThumbnailJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ThumbnailWrapJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/json/ThumbnailWrapJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/bot/AudioTrackScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/bot/AudioTrackScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bodzan/bot/GuildAudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bodzan/bot/GuildAudioManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +142,9 @@
       <workItem from="1776946636159" duration="1105000" />
       <workItem from="1776948056776" duration="440000" />
       <workItem from="1776948510740" duration="56000" />
-      <workItem from="1776948571896" duration="7935000" />
+      <workItem from="1776948571896" duration="11398000" />
+      <workItem from="1776980360219" duration="3614000" />
+      <workItem from="1777021333261" duration="1268000" />
     </task>
     <servers />
   </component>
@@ -162,27 +161,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bodzan/Main.java</url>
-          <line>104</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bodzan/Main.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bodzan/Main.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/discordBotJava$Main.ic" NAME="Main Coverage Results" MODIFIED="1688486690739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

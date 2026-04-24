@@ -267,13 +267,14 @@ public class Main {
                         .flatMap(VoiceState::getChannel)
                         .flatMap(channel -> channel.join(spec -> spec.setProvider(GuildAudioManager.of(channel.getGuildId()).getProvider())))
                         .then();
-                return joinVoice.and(event.reply().withEmbeds(joinEmbed));
+                return event.reply().withEmbeds(joinEmbed).and(joinVoice);
             } else if (event.getCommandName().equals("play")) {
                 SongLinkWithEmbed linkWithEmbed = event.getInteraction().getCommandInteraction()
                         .flatMap(commandInteraction -> commandInteraction.getOption("keyword"))
                         .flatMap(ApplicationCommandInteractionOption::getValue)
                         .map(applicationCommandInteractionOptionValue -> searchForVideoOrGetLink(applicationCommandInteractionOptionValue.asString(), ytApiKey))
                         .orElseThrow();
+
                 Snowflake currentGID = event.getInteraction().getGuildId().orElseThrow();
                 GuildAudioManager.of(currentGID).PLAYER_MANAGER.loadItem(linkWithEmbed.getSongLink(), GuildAudioManager.of(currentGID).getScheduler());
                 return event.reply().withEmbeds(linkWithEmbed.getEmbed());

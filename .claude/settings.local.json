@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(mvn clean *)",
-      "PowerShell(Get-Command *)"
+      "PowerShell(Get-Command *)",
+      "WebSearch",
+      "Bash(curl *)"
     ]
   }
 }
